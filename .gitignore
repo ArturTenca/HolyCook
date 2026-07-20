@@ -10,8 +10,8 @@ dist-ssr
 .env.local
 .env.*.local
 
-# Supabase (SQL scripts, migrations e config ficam fora do repositório)
-supabase/
+# Supabase CLI (SQL scripts, migrations e config na raiz — não ignore src/lib/supabase/)
+/supabase/
 
 # Logs
 *.log
