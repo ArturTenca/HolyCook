@@ -24,8 +24,8 @@ export function LoginPage() {
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: '',
-      password: '',
+      email: 'user@login.com',
+      password: '1234',
     },
   })
 
@@ -62,6 +62,16 @@ export function LoginPage() {
             {serverError}
           </div>
         )}
+
+        <div className="rounded-lg border border-caramel/25 bg-caramel/10 px-4 py-3 text-sm text-cream/80">
+          <p className="font-medium text-caramel">Acesso demonstração</p>
+          <p className="mt-1.5 text-cream/60">
+            E-mail: <span className="font-mono text-cream/90">user@login.com</span>
+          </p>
+          <p className="text-cream/60">
+            Senha: <span className="font-mono text-cream/90">1234</span>
+          </p>
+        </div>
 
         <Input
           label="E-mail"
